@@ -1,0 +1,29 @@
+<app-slider [nombre]="'Articulo'" [size]="'small'"></app-slider>
+<div class="center">
+    <section id="content">
+
+            <article class="article-item article-detail"  *ngIf="article">
+                <div class="image-wrap" >
+                    <img src="{{url + 'get-image/'+ article.image}}" alt={{article.title}} *ngIf="article.image"/>
+                    <img  src="https://championshipmartialarts716.com/wp-content/uploads/2017/04/default-image-620x600.jpg" alt={{article.title}} *ngIf="!article.image"/>
+                </div>
+
+                <h1 class="subheader">{{article.title}}</h1>
+                <span class="date">
+                    {{article.date | amLocale: 'es' | amTimeAgo}} 
+                </span>
+                <p class="contenido">
+                    {{article.content}} 
+                </p>
+
+                <a class="btn edit" [routerLink]="['/editar/' + article._id]" routerLinkActive="router-link-active" >editar</a>
+                <a (click)="delete(article._id)" class="btn eliminar" >eliminar</a>
+            
+
+                <div class="clearfix"></div>
+            </article>
+        
+    </section>
+</div>
+
+<app-sidebar></app-sidebar>

@@ -1,0 +1,30 @@
+<header id="header">
+    <div class="center">
+        <!-- LOGO -->
+        <div id="logo">
+           
+            <span id="brand">
+                <strong>Blog</strong>Angular
+            </span>
+        </div>
+        
+        <!-- MENU -->
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a [routerLink]="['/home'] " [routerLinkActive]="['active']" >Inicio</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/blog']" [routerLinkActive]="['active']" >Blog</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/crear']" [routerLinkActive]="['active']" >Crear Articulo</a>
+                </li>
+                           
+            </ul>
+        </nav>
+
+        <!--LIMPIAR FLOTADOS-->
+        <div class="clearfix"></div>
+    </div>
+</header>

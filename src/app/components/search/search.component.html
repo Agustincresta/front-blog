@@ -1,0 +1,14 @@
+<app-slider [nombre]="'Buscador'" [size]="'small'"></app-slider>
+<div class="center">
+    <section id="content">
+        <h1 class="subheader" *ngIf="articles && articles.length != 0">Articulos encontrados</h1>
+        <h1 class="subheader" *ngIf="articles && articles.length == 0"></h1>
+
+        <app-articles
+        [articles]='articles'>
+
+        </app-articles>
+
+    </section>
+    <app-sidebar></app-sidebar>
+</div>
